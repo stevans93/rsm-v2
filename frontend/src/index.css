@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins";
+}
+#root {
+height: 100%;
+/* background-color: #F0F5F7;  */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative; 
+    /* background-color: rgba(128, 128, 128); */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url("../src/assets/bg-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+.no-before-background::before {
+    background-image:none;
+    background-color:#F0F5F7;
+    opacity: none;
+
+  }
+
+p, span, label, input {
+    color: #232349;
+    font-size: 15px;
+}
+
+a {
+    cursor: pointer;
+}
+
+input:-webkit-autofill{
+    background: transparent;
+}
+
+.shadowBorder {
+    box-shadow: 0px 1px 50px 5px #A3C8DB99;
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divHover:hover {
+    background-color: #111139;
+}
+  
+.divHover:hover p,
+.divHover:hover span,
+.divHover:hover .arrow {
+    color: #fff;
+}
+
+.mobile {
+    display: none;
+}
+
+.active {
+    background: #111139;
+    color: #fff;
+}
+
+.divActive {
+    background: #111139;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+  }
+  
+  .overlay.hidden {
+    display: none;
+  }
+  
+  .overlay.visible {
+    display: block;
+  }
+  
+  .overlay-visible {
+    z-index: 0;
+  }
+   
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        margin: 50px;
+    }
+
+    .dashboard {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .iPSE {
+        margin-top: 0px;
+    }
+
+    .iPSep {
+        padding: 20px 40px 20px 40px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+    .map {
+        width: 200px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        margin: 50px 30px 30px 30px;
+    }
+
+    .dashboard {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile {
+        margin: 50px 20px 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .iPSE {
+        margin-top: 0px;
+    }
+
+    .iPSep {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .map {
+        width: 150px;
+    }
+
+    .dashboard {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    .iPSE {
+        margin-top: 0px;
+    }
+
+    .iPSep {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .map {
+        width: 150px;
+    }
+
+    .dashboard {
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .iPSE {
+        margin-top: 0px;
+    }
+
+    .iPSep {
+        width: 310px;
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .map {
+        width: 150px;
+    }
+
+    .dashboard {
+        width: 310px;
+    }
+}

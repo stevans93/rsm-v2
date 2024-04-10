@@ -1,0 +1,10 @@
+### UPDATE AD multipart/form-data
+POST http://localhost:4000/api/user/upload-image
+Content-Type: multipart/form-data; boundary=FormData
+
+--FormData
+Content-Disposition: form-data; name="file"; filename="logoADS.jpeg"
+Content-Type: image/jpeg 
+
+< ./testData/logoADS.jpeg
+--FormData--
