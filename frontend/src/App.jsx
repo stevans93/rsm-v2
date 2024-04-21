@@ -9,8 +9,8 @@ import axios from 'axios'
 import {restoreUser} from './store/userSlice.js'
 import {useDispatch} from 'react-redux'
 
-axios.defaults.baseURL = 'https://mapeapi.digitalhousepower.rs/api'
-// axios.defaults.baseURL = 'http://localhost:4000/api'
+// axios.defaults.baseURL = 'https://mapeapi.digitalhousepower.rs/api'
+axios.defaults.baseURL = 'http://localhost:4000/api'
 
 axios.interceptors.request.use((config) => {
   if (localStorage.hasOwnProperty('rsm_token')) {

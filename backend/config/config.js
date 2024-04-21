@@ -5,14 +5,15 @@ module.exports = {
     PORT: process.env.PORT,
     SECRET_KEY: process.env.SECRET_KEY,
     MEDIA_LOCATION: process.env.MEDIA_LOCATION,
+    NODE_ENV: process.env.NODE_ENV,
     CORS_OPTIONS: {
-        origin: (origin, callback) => {
-            // if(whiteList.includes(origin)) {
-            //     // callback(null, true);
-            // } else {
-            //     // callback(new Error("Not Allowed By Cors!"));
-            // }
-            callback(null, true);
-        }
+        corsOptionsDev: {
+            origin: ['http://localhost:5173', '*'],
+            methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'DELETE', 'HEAD', 'PATCH'],
+        },
+        corsOptionsProd: {
+            origin: ['https://rsm.digitalhousepower.rs'],
+            methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'DELETE', 'HEAD', 'PATCH'],
+        },
     }
 }

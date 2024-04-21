@@ -10,7 +10,9 @@ const changePassword = async (req, res) => {
     const checkPassword = await bcrypt.compare(oldPassword, user.password)
 
     user.password = await bcrypt.hash(newPassword, saltRounds)
+
     user.save()
+    
     res.status(200).json('Lozinka promenjena')
   } catch (error) {
     console.log(error)
