@@ -57,7 +57,7 @@ function InfoAboutTheCity({closeModal, cityInfo}) {
             </a>
             <a
               target="_blank"
-              href={`${cityInfoObj?.numberOfOfficials}`}
+              href={`${cityInfoObj?.numberOfApplications}`}
               rel="noreferrer"
               className=" border-2 border-main px-[30px] py-[10px] text-main text-[14px] rounded-2xl hover:bg-main hover:border-main hover:text-[#fff]">
               Predsetavke građana – Baza
